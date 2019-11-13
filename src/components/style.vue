@@ -1,5 +1,7 @@
 <style>
-
+.div-produtos img {
+  width: 220px;
+}
 #div-logincarrinho img {
   width: 25px;
 }

@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <div class="div-produtos tamanho text-center mt-10 mb-10">
-        <v-row>
+        <v-row>  
           <v-col>
             <div class="marginbottom">
               <img src="../assets/bone1.svg" />
@@ -15,7 +15,7 @@
             </div>
             <div class>
               <img src="../assets/camiseta1.svg" />
-              <p class="title">Camiseta de Algodão Branca Nike</p>
+              <p class="title">Camiseta Branca Nike</p>
               <p class="preco headline font-weight-medium">R$ 69,90</p>
               <p class="subtitle-2 espacamento">5x de R$ 14,00 sem juros*</p>
               <p>

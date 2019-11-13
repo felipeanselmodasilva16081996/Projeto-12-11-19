@@ -1,5 +1,5 @@
 <template>
-  <div class="tamanho d-flex align-center justify-space-around mt-10 mb-10" id="Marcas">
+  <div class="tamanho d-flex align-center justify-space-around flex-wrap mt-10 mb-10" id="marcas">
     <div>
      <router-link to="/"><img src="../assets/adidas.png"/></router-link>
     </div>
@@ -20,14 +20,12 @@
 
 <style scoped>
 img{
-width: 120px;
+width: 140px;
+margin: 0 15px;
 }
-@media (max-width: 800px){
-#Marcas{
-  flex-wrap: wrap;
-}
-img{
-  padding: 10px;
-}
+@media screen and (max-width: 944px){
+  img{
+    margin: 15px 20px;
+  }
 }
 </style>

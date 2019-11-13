@@ -136,7 +136,9 @@
         </div>
 
         <div id="div-logincarrinho" class="d-flex align-center pl-4">
-          <img src="../assets/icon-login.svg" class="ml-1" />
+          <router-link to="/" class="text-decoration">
+            <img src="../assets/icon-login.svg" class="ml-1" />
+          </router-link>
 
           <hr id="hr" />
 
@@ -163,7 +165,9 @@
           </div>
 
           <div id="div-logincarrinho" class="d-flex align-center pl-4">
-            <img src="../assets/icon-login.svg" class="ml-1" />
+            <router-link to="/login" class="text-decoration">
+              <img src="../assets/icon-login.svg" class="ml-1" />
+            </router-link>
 
             <hr id="hr" />
 
@@ -172,7 +176,7 @@
             </button>
           </div>
         </div>
-      <img src="../assets/burguer.svg" alt="Burguer">
+
         <nav id="menu">
           <v-menu v-model="menu" :close-on-content-click="false">
             <template v-slot:activator="{ on }">
@@ -285,6 +289,12 @@
             </template>
           </v-menu>
         </nav>
+
+        <div class="hamburguer" @click="burguer">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
       </div>
     </header>
   </div>
@@ -294,7 +304,7 @@
 export default {};
 </script>
 
-<style scoped>
+<style>
 #topo {
   background-color: rgb(97, 2, 97);
   color: #fff;
@@ -310,7 +320,7 @@ header {
   justify-content: space-between;
   text-align: center;
 }
-#sub-topo2{
+#sub-topo2 {
   display: none;
 }
 #hr {
@@ -322,8 +332,6 @@ header {
 }
 #link:hover #a {
   color: #fff;
-}
-@media (max-width: 1000px) {
 }
 @media (max-width: 1300px) {
   #sub-topo1 {
@@ -337,21 +345,40 @@ header {
   }
   #menu {
     grid-row: 2/3;
-    margin: auto;
+    margin: 40px auto;
   }
   #hr {
     width: 2px;
     height: 45px;
   }
 }
-@media (max-width: 867px){
-  #menu{
-    padding-top: 15px;
+@media (max-width: 870px) {
+  #menu {
+    display: none;
   }
-}
-@media (max-width: 700PX){
-  #menu{
-    padding-top: 15px;
+  .hamburguer {
+    width: 35px;
+    height: 30px;
+    margin: 40px auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.8s;
+  }
+  .change .line-1 {
+    transform: rotateZ(-45deg) translate(-8px, 6px);
+  }
+  .change .line-2 {
+    opacity: 0;
+  }
+  .change .line-3 {
+    transform: rotateZ(45deg) translate(-8px, -6px);
   }
 }
 </style>
